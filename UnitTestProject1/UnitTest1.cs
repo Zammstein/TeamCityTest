@@ -18,7 +18,7 @@ namespace UnitTestProject1
             User user = new User(name, age, bankAccount);
             Assert.AreEqual(balance, bankAccount.balance, "19");
             Assert.AreEqual(name, user.name, "20");
-            Assert.AreEqual(age, user.age, );
+            Assert.AreEqual(age, user.age, "21");
         }
 
         [TestMethod]
