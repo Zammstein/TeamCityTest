@@ -15,6 +15,8 @@ namespace WindowsFormsApplication7
         public Form1()
         {
             InitializeComponent();
+            User user = new User("Sam", 20);
+            user.CreateUserNode(user);
         }
     }
 }

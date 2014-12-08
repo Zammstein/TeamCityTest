@@ -36,5 +36,11 @@ namespace UnitTestProject1
 
             Console.Write("Transfer Test has finished succesfully");
         }
+
+        [TestMethod]
+        public void TestNodeCreation() {
+            User user = new User("TestDummy", 10);
+            user.CreateUserNode(user);
+        }
     }
 }

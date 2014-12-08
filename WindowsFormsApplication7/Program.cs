@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Neo4jClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace WindowsFormsApplication7
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1());              
         }
     }
 
@@ -31,6 +32,23 @@ namespace WindowsFormsApplication7
             this.name = name;
             this.age = age;
             this.bankAccount = bankAccount;
+        }
+
+        public User(String name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        public void CreateUserNode(User user)
+        {
+            var client = new GraphClient(new Uri("http://localhost:7474/db/data"));
+            client.Connect();
+            var newUser = user;
+            client.Cypher
+            .Create("(user:User {newUser})")
+            .WithParam("newUser", newUser)
+            .ExecuteWithoutResults();
         }
     }
 
