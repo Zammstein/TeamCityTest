@@ -19,4 +19,27 @@ namespace WindowsFormsApplication7
             Application.Run(new Form1());
         }
     }
+
+    public class User {
+
+        public String name;
+        public int age;
+        public BankAccount bankAccount;
+
+
+        public User(String name, int age, BankAccount bankAccount) {
+            this.name = name;
+            this.age = age;
+            this.bankAccount = bankAccount;
+        }
+    }
+
+    public class BankAccount {
+        
+        public double balance;
+
+        public BankAccount(double balance) {
+            this.balance = balance;
+        }
+    }
 }
