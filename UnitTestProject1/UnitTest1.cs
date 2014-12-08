@@ -12,13 +12,23 @@ namespace UnitTestProject1
         public int age = 12;
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestCreateMethods()
         {
             BankAccount bankAccount = new BankAccount(balance);
             User user = new User(name, age, bankAccount);
-            Assert.AreEqual(balance, bankAccount.balance);
-            Assert.AreEqual(name, user.name);
-            Assert.AreEqual(age, user.age);
+            Assert.AreEqual(balance, bankAccount.balance, "19");
+            Assert.AreEqual(name, user.name, "20");
+            Assert.AreEqual(age, user.age, );
+        }
+
+        [TestMethod]
+        public void TestTransfer() {
+            BankAccount bankOne = new BankAccount(balance);
+            BankAccount bankTwo = new BankAccount(balance);
+            User userOne = new User(name, age, bankOne);
+            User userTwo = new User("bar", age, bankTwo);
+
+            userOne.bankAccount.Transefer(userTwo.bankAccount, userOne.bankAccount.balance);
         }
     }
 }

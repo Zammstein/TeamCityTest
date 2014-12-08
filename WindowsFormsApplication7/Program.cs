@@ -17,7 +17,6 @@ namespace WindowsFormsApplication7
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            Console.Write("a");
         }
     }
 
@@ -41,6 +40,15 @@ namespace WindowsFormsApplication7
 
         public BankAccount(double balance) {
             this.balance = balance;
+        }
+
+        public void Transefer(BankAccount toBank, double amount) {
+            this.balance -= amount;
+            toBank.balance += amount;
+        }
+
+        public void modifyBalance(double amount) {
+            this.balance += amount;
         }
     }
 }
