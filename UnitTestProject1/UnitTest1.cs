@@ -16,9 +16,11 @@ namespace UnitTestProject1
         {
             BankAccount bankAccount = new BankAccount(balance);
             User user = new User(name, age, bankAccount);
-            Assert.AreEqual(balance, bankAccount.balance, "19");
-            Assert.AreEqual(name, user.name, "20");
-            Assert.AreEqual(age, user.age, "21");
+            Assert.AreEqual(balance, bankAccount.balance, "expected bankaccount balance to be 10.22");
+            Assert.AreEqual(name, user.name, "expected username to be foo");
+            Assert.AreEqual(age, user.age, "expected age to be 12");
+
+            Console.Write("TestCreateMethods completed succesfully");
         }
 
         [TestMethod]
@@ -29,6 +31,10 @@ namespace UnitTestProject1
             User userTwo = new User("bar", age, bankTwo);
 
             userOne.bankAccount.Transefer(userTwo.bankAccount, userOne.bankAccount.balance);
+
+            Assert.AreEqual(userTwo.bankAccount.balance, 20.44, "The Transfer has failed!");
+
+            Console.Write("Transfer Test has finished succesfully");
         }
     }
 }
