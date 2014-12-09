@@ -11,6 +11,7 @@ namespace UnitTestProject1
         public String name = "foo";
         public int age = 12;
 
+        // comment
         [TestMethod]
         public void TestCreateMethods()
         {
