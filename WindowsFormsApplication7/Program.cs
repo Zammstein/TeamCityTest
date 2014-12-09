@@ -66,6 +66,7 @@ namespace WindowsFormsApplication7
         }
 
         public void modifyBalance(double amount) {
+            // add to account
             this.balance += amount;
         }
     }
