@@ -21,6 +21,9 @@ namespace WindowsFormsApplication7
         }
     }
 
+    /// <summary>
+    /// The User class for bank acounts
+    /// </summary>
     public class User {
 
         public String name;
@@ -52,6 +55,9 @@ namespace WindowsFormsApplication7
         }
     }
 
+    /// <summary>
+    /// BankAccount class to connect to a User
+    /// </summary>
     public class BankAccount {
         
         public double balance;
