@@ -56,7 +56,7 @@ namespace WindowsFormsApplication7
     }
 
     /// <summary>
-    /// BankAccount class to connect to a User
+    /// BankAccount class to connect to a User.
     /// </summary>
     public class BankAccount {
         
