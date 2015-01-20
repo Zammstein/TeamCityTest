@@ -22,7 +22,7 @@ namespace WindowsFormsApplication7
     }
 
     /// <summary>
-    /// The User class for bank acounts
+    /// The User class for bank acounts.
     /// </summary>
     public class User {
 
